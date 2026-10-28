@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Silvia Suárez | Arquitecta de Software</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="cabecera">
+    <nav class="menu">
+        <a href="#perfil">Perfil</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#estudios">Estudios</a>
+        <a href="#calculadora">Calculadora</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="presentacion">
+        <div class="avatar">SS</div>
+        <div>
+            <h1>Silvia Elena Suarez Cabascango</h1>
+            <p class="cargo">Arquitecta de Software</p>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section id="perfil" class="seccion">
+        <h2>Perfil</h2>
+        <p>
+            Arquitecta de soluciones y líder técnica con más de 10 años de trayectoria
+            liderando equipos de desarrollo Frontend y Backend en proyectos de salud,
+            educación, logística y gestión de riesgos. Diseño arquitecturas en AWS
+            e integro soluciones con IA generativa y agentes inteligentes.
+        </p>
+    </section>
+
+    <section id="experiencia" class="seccion">
+        <h2>Experiencia</h2>
+        <ul class="lista-experiencia">
+            <li>
+                <span class="fecha">feb 2022 – actualidad</span>
+                <strong>IT270 S.A.S.</strong>
+                <span>Arquitecto de Software. Liderazgo técnico, arquitectura en AWS (EC2, Docker, CI/CD) e IA generativa.</span>
+            </li>
+            <li>
+                <span class="fecha">oct 2021 – dic 2021</span>
+                <strong>Foqusapps</strong>
+                <span>App móvil de realidad aumentada con dinosaurios en 3D y mapa guía para un parque turístico.</span>
+            </li>
+            <li>
+                <span class="fecha">ago 2021 – oct 2021</span>
+                <strong>Me2You, México</strong>
+                <span>Desarrollador web. Actualización y despliegue del portal me2you.mx.</span>
+            </li>
+            <li>
+                <span class="fecha">ene 2019 – sep 2019</span>
+                <strong>GLP, Antonio Ante</strong>
+                <span>Sistema web y móvil para logística, distribución y venta de gas licuado de petróleo.</span>
+            </li>
+            <li>
+                <span class="fecha">nov 2017 – nov 2020</span>
+                <strong>IST Luis Tello, Esmeraldas</strong>
+                <span>Desarrollador full stack. Sistema académico con matrículas, docentes y estudiantes.</span>
+            </li>
+            <li>
+                <span class="fecha">ene 2017</span>
+                <strong>MiMensajeroExpress, Quito</strong>
+                <span>Plataforma móvil de mensajería empresarial con mapeo y seguimiento en tiempo real.</span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="habilidades" class="seccion">
+        <h2>Habilidades</h2>
+        <ul class="etiquetas">
+            <li>AWS</li>
+            <li>Docker</li>
+            <li>CI/CD</li>
+            <li>IA generativa</li>
+            <li>C# / .NET</li>
+            <li>PHP</li>
+            <li>Node.js</li>
+            <li>Angular</li>
+            <li>React</li>
+            <li>HTML5 y CSS3</li>
+            <li>Flutter</li>
+            <li>PostgreSQL</li>
+            <li>MySQL</li>
+            <li>Git</li>
+        </ul>
+    </section>
+
+    <section id="estudios" class="seccion">
+        <h2>Estudios y certificaciones</h2>
+        <ul class="lista-simple">
+            
+            <li>
+                <strong>Bachiller Físico Matemático</strong>
+                <span>Unidad Educativa Víctor Mideros Almeida · 1999 – 2005</span>
+            </li>
+            <li>
+                <strong>AWS Certified Cloud Practitioner</strong>
+                <span>jul 2024</span>
+            </li>
+            <li>
+                <strong>AWS Educate: Introduction to Generative AI</strong>
+                <span>mar 2025</span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="calculadora" class="seccion">
+        <h2>Calculadora</h2>
+        <p>Escribe dos números, elige la operación y presiona calcular.</p>
+
+        <form class="calc" method="post" action="calculadora.php">
+            <label>Número 1
+                <input type="number" name="num1" step="any" placeholder="Ej: 12" required>
+            </label>
+
+            <label>Operación
+                <select name="op">
+                    <option value="suma">Suma (+)</option>
+                    <option value="resta">Resta (−)</option>
+                    <option value="multiplicacion">Multiplicación (×)</option>
+                    <option value="division">División (÷)</option>
+                </select>
+            </label>
+
+            <label>Número 2
+                <input type="number" name="num2" step="any" placeholder="Ej: 3" required>
+            </label>
+
+            <button type="submit" class="boton">Calcular</button>
+        </form>
+    </section>
+
+    <section id="contacto" class="seccion">
+        <h2>Contacto</h2>
+        <ul class="lista-simple">
+            <li><strong>Correo</strong> <a href="mailto:esilvia320@gmail.com">esilvia320@gmail.com</a></li>
+            <li><strong>Correo de trabajo</strong> <a href="mailto:silvia.suarez@it270.com">silvia.suarez@it270.com</a></li>
+            <li><strong>LinkedIn</strong> <a href="https://linkedin.com/in/silvia-elena-suarez-29a73695" target="_blank" rel="noopener">silvia-elena-suarez</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer class="pie">
+    <p>Silvia Suárez · Hecho con HTML, CSS y PHP</p>
+</footer>
+
+</body>
+</html>

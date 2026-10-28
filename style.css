@@ -1,0 +1,324 @@
+/* ---------- Variables ---------- */
+:root {
+    --oscuro: #12263a;
+    --fondo: #f1f5f9;
+    --blanco: #ffffff;
+    --acento: #0e8f7e;
+    --acento-oscuro: #0a6b5e;
+    --texto-suave: #5b6b7b;
+    --borde: #d3dce5;
+    --error: #b3261e;
+}
+
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--oscuro);
+    line-height: 1.6;
+}
+
+a { color: var(--acento-oscuro); }
+a:hover { text-decoration: none; }
+
+ul { list-style: none; }
+
+/* ---------- Cabecera ---------- */
+.cabecera {
+    background: var(--oscuro);
+    color: var(--blanco);
+    padding: 1rem 1.5rem 3.5rem;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    max-width: 52rem;
+    margin: 0 auto 3rem;
+}
+
+.menu a {
+    color: #cfe3ee;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: color .2s, border-color .2s;
+}
+
+.menu a:hover {
+    color: var(--blanco);
+    border-color: var(--acento);
+}
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    max-width: 52rem;
+    margin: 0 auto;
+}
+
+.avatar {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: var(--acento);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.presentacion h1 {
+    font-size: 2.2rem;
+    line-height: 1.15;
+}
+
+.cargo {
+    margin-top: .3rem;
+    color: #8fe0d2;
+    font-size: 1.1rem;
+}
+
+/* ---------- Secciones ---------- */
+main {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.seccion {
+    padding: 2.2rem 0;
+    border-bottom: 1px solid var(--borde);
+}
+
+.seccion:last-child { border-bottom: none; }
+
+.seccion h2 {
+    font-size: 1.4rem;
+    margin-bottom: .8rem;
+}
+
+/* Barra en título */
+.seccion h2::before {
+    content: "";
+    display: inline-block;
+    width: .4rem;
+    height: 1.2rem;
+    margin-right: .6rem;
+    background: var(--acento);
+    border-radius: 2px;
+    vertical-align: -2px;
+}
+
+/* ---------- Experiencia ---------- */
+.lista-experiencia li {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-left: 4px solid var(--borde);
+    border-radius: .5rem;
+    padding: .8rem 1rem;
+    margin-bottom: .8rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+
+.lista-experiencia li:hover {
+    transform: translateX(6px);
+    border-left-color: var(--acento);
+    box-shadow: 0 4px 12px rgba(18, 38, 58, .1);
+}
+
+/* Destaca en lista primera */
+.lista-experiencia li:first-child {
+    border-left-color: var(--acento);
+    background: #e8f6f3;
+}
+
+/* Ultimo elemento sin margen */
+.lista-experiencia li:last-child { margin-bottom: 0; }
+
+.fecha {
+    font-size: .85rem;
+    color: var(--texto-suave);
+}
+
+/* ---------- Habilidades (etiquetas) ---------- */
+.etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+}
+
+.etiquetas li {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 999px;
+    padding: .3rem .9rem;
+    font-size: .95rem;
+    transition: background .2s, color .2s;
+}
+
+/* Alterna colores: pares con un tono distinto */
+.etiquetas li:nth-child(even) { background: #e8f6f3; }
+
+/* Cada tercera etiqueta con borde de color */
+.etiquetas li:nth-child(3n) { border-color: var(--acento); }
+
+.etiquetas li:hover {
+    background: var(--acento);
+    color: var(--blanco);
+}
+
+/* ---------- Listas simples ---------- */
+.lista-simple li {
+    display: flex;
+    flex-direction: column;
+    padding: .7rem 0;
+    border-bottom: 1px dashed var(--borde);
+}
+
+.lista-simple li:last-child { border-bottom: none; }
+
+.lista-simple li span { color: var(--texto-suave); font-size: .92rem; }
+
+/* ---------- Elementos de Formulario / calculadora ---------- */
+.calc {
+    margin-top: 1.2rem;
+    max-width: 24rem;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 1rem;
+    padding: 1.3rem;
+    display: grid;
+    gap: 1rem;
+    box-shadow: 0 6px 18px rgba(18, 38, 58, .08);
+}
+
+.calc label {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+input,
+select {
+    padding: .65rem .8rem;
+    border: 2px solid var(--borde);
+    border-radius: .6rem;
+    font-size: 1rem;
+    background: var(--fondo);
+    color: var(--oscuro);
+    transition: border-color .2s, background .2s, box-shadow .2s;
+}
+
+input::placeholder { color: #9aa8b5; }
+
+input:hover,
+select:hover { border-color: #9fb3c4; }
+
+input:focus,
+select:focus {
+    outline: none;
+    background: var(--blanco);
+    border-color: var(--acento);
+    box-shadow: 0 0 0 4px rgba(14, 143, 126, .2);
+}
+
+/* Verde si el valor es válido, rojo si no lo es (solo después de escribir) */
+input:valid:not(:placeholder-shown) { border-color: var(--acento); }
+input:invalid:not(:placeholder-shown) { border-color: var(--error); }
+
+/* ---------- Botones ---------- */
+.boton {
+    display: inline-block;
+    padding: .8rem 1.2rem;
+    border: none;
+    border-radius: .6rem;
+    background: var(--acento);
+    color: var(--blanco);
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .2s, transform .15s, box-shadow .2s;
+}
+
+.boton:hover {
+    background: var(--acento-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(14, 143, 126, .35);
+}
+
+.boton:active { transform: translateY(0); }
+
+.boton:focus-visible {
+    outline: 3px solid var(--oscuro);
+    outline-offset: 2px;
+}
+
+/* ---------- Pie ---------- */
+.pie {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--texto-suave);
+    font-size: .9rem;
+}
+
+/* ---------- Página de resultado (calculadora.php) ---------- */
+.pagina-resultado {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.tarjeta-resultado {
+    width: 100%;
+    max-width: 24rem;
+    background: var(--oscuro);
+    color: var(--blanco);
+    border-radius: 1rem;
+    padding: 1.8rem;
+    text-align: center;
+}
+
+.tarjeta-resultado h1 { font-size: 1.3rem; margin-bottom: 1rem; }
+.operacion { color: #8fe0d2; font-size: 1.1rem; }
+.valor { font-size: 2.6rem; font-weight: bold; margin: .3rem 0 1.4rem; word-break: break-all; }
+.mensaje-error { color: #ffb4ab; font-size: 1.1rem; margin-bottom: 1.4rem; }
+
+/* ---------- Media queries (pantallas pequeñas) ---------- */
+@media (max-width: 600px) {
+    .presentacion {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .presentacion h1 { font-size: 1.7rem; }
+
+    .menu { justify-content: center; }
+
+    .calc { max-width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+}
